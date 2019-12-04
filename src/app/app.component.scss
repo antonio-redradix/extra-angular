@@ -1,0 +1,25 @@
+.policeHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 5px;
+    border-bottom: black solid 2px;
+    background-color: #0F39A9;
+    // justify-content: space-around;
+    img{
+        height: 100px;
+    }
+    #logoPolicia:hover{
+        cursor: pointer
+    }
+    div{
+        width: 400px;
+        padding-left: 20px;
+        padding-right: 20%;
+        font-size: 40px;
+        font-family: Impact;
+        color: rgb(247, 241, 241);
+        text-align: center;
+    }
+}

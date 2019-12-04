@@ -1,0 +1,42 @@
+<h2 *ngIf="!editar">Formulario de nueva denuncia</h2>
+<h2 *ngIf="editar">Editar denuncia {{this.denuncia.ID}}</h2>
+<form class="formDenuncia" [formGroup]="formDenuncia">
+    <div class="formDenuncia__input">
+        <label for="Titulo">Titulo</label>
+        <input name="Titulo"
+              formControlName="Titulo"
+              type="text"/> 
+    </div>
+
+    <div class="formDenuncia__input">
+        <label for="Fecha">Fecha</label>
+        <input name="Fecha"
+              formControlName="Fecha"
+              type="date" /> 
+    </div>
+    <div class="formDenuncia__input">
+        <label for="Denunciante">Denunciante</label>
+        <input name="Denunciante"
+              formControlName="Denunciante"
+              type="text" /> 
+    </div>
+    <div class="formDenuncia__input">
+        <label for="Ciberdelito">Ciberdelito</label>
+        <input name="Ciberdelito"
+              formControlName="Ciberdelito"
+              type="checkbox" /> 
+    </div>
+    <div class="formDenuncia__input">
+            <label for="Prioridad">Prioridad</label>
+            <input name="Prioridad"
+                  formControlName="Prioridad"
+                  type="select" /> 
+    </div>
+    <div class="formDenuncia__input--Declaracion">
+            <label for="Declaracion">Declaracion</label><br>
+            <textarea name="Declaracion"
+                  formControlName="Declaracion"></textarea>
+    </div><br>         
+        <button type="submit" [disabled]="!formDenuncia.valid" (click)="onSubmit()">Submit</button> 
+</form>
+

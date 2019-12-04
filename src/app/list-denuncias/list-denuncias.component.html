@@ -1,0 +1,13 @@
+
+<div class="listContainer">
+        <span *ngFor="let denuncia of listDenuncia; index as i">
+                <div class="DenunciaDiv">
+                    <div routerLink="/list/{{i+1}}" class="DenunciaDiv__Titulo" (click)="detailHandler(denuncia)">{{denuncia.Titulo}}</div>
+                    <div class="DenunciaDiv__Denunciante">{{denuncia.Denunciante}}</div>
+                    <button value="Editar" routerLink="/add/{{i+1}}">Editar</button>
+                    <button (click)="Archivar(denuncia)">Archivar</button>    
+                </div>
+        </span>    
+</div>
+
+

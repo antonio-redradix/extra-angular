@@ -1,0 +1,18 @@
+.denunciaPanel{
+    width: 600px;
+    height: auto;
+    min-height: 400px;
+    background-color: rgb(224, 221, 221);
+    padding-left: 10px;
+    padding-top: 20px;
+    &__declarationText{
+        margin-top: 20px;
+        width: 100%;
+        div{
+            margin-top: 10px;
+        }
+        &__declaracion{
+            color: rgb(145, 141, 141);
+        }
+    }
+}

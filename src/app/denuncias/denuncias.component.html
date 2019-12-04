@@ -1,0 +1,7 @@
+<div *ngIf = "!selectedDenuncia" class="DenunciaContainer">
+        <h2>Denuncias Registradas</h2>
+        <app-list-denuncias [listDenuncia]="Denuncias" (selectedDenuncia)=selectHandler($event)></app-list-denuncias>
+        <input type="button" value="Registrar denuncia" routerLink="/add">
+</div>
+<app-denuncia-detail *ngIf="selectedDenuncia" [denunciaSelected]="selectedDenuncia"></app-denuncia-detail>
+ 
