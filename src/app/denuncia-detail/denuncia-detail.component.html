@@ -1,0 +1,31 @@
+<div class="zaragozaReportDetail card container bg-light col-md-8 col-md-offset-4" *ngIf="idReportShow != undefined">
+	<h1>Denuncia nº {{idReportShow.id}}</h1>
+	<div class="reportDetailsContent card ">
+		<p>Titulo: {{idReportShow.title}}</p>
+		<p>Fecha: {{idReportShow.date}}</p>
+		<p>Denunciante: {{idReportShow.codDenunciante}}</p>
+		<p>Prioridad: {{idReportShow.prority}}</p>
+		<p>Ciberdelito: {{idReportShow.cyber}}</p>
+		<p class="targetReport__data--desc">Descripcion: <br> {{idReportShow.description}}</p>
+	</div>
+	<button type="button" class="btn btn-primary col-4"  routerLink="/list">
+		<i class="fa fa-plus" aria-hidden="true"></i>
+		Volver
+	</button>
+	<br>
+</div>
+
+
+<!--
+<div class="targetReport" *ngIf="idReportShow != undefined">
+	<h1>Denuncia nº {{idReportShow.id}}</h1>
+	<div class="targetReport__data">
+		<p>Titulo: {{idReportShow.title}}</p>
+		<p>Fecha: {{idReportShow.date}}</p>
+		<p>Denunciante: {{idReportShow.codDenunciante}}</p>
+		<p>Prioridad: {{idReportShow.prority}}</p>
+		<p>Ciberdelito: {{idReportShow.cyber}}</p>
+		<p class="targetReport__data--desc">Descripcion: <br> {{idReportShow.description}}</p>
+	<div>
+</div>
+-->

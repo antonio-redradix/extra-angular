@@ -1,0 +1,20 @@
+.zaragozaReportDetail{
+	margin-top: 50px;
+}
+
+.reportDetailsContent{
+	padding: 2%;
+	margin-bottom: 2%;
+}
+
+.targetReport{
+	padding: 1%;
+	width: 600px;
+	&__data{
+		background-color: lightgrey;
+		padding: 1%;
+		&--desc{
+			margin-top:20px;
+		}
+	}
+}

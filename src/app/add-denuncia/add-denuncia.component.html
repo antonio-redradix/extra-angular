@@ -1,0 +1,44 @@
+<div class="zaragozaReportForm card container bg-light col-md-8 col-md-offset-4">
+    <h2>Formulario nueva denuncia</h2>
+    <form class="reportListForm form-group col-12" [formGroup]="nameForm" (ngSubmit)="onSubmit()">
+    	<div class="reportListForm__option">
+            <p  for="title">Title:</p>
+            <input class="form-control" name="title" type="text" id="title" formControlName="title" data-toggle="tooltip" data-placement="top" title="Introduce un título para la denuncia">
+        </div>
+        <div class="reportListForm__option">
+            <p for="reportDate">Fecha:</p>
+            <input class="form-control" name="reportDate" type="text" id="reportDate" formControlName="reportDate" data-toggle="tooltip" data-placement="top" title="Introduce una fecha para la denuncia">
+        </div>
+        <div class="reportListForm__option">
+            <p for="codRep">Codigo denunciante:</p>
+            <input class="form-control" name="codRep" type="text" id="codRep" formControlName="codRep" data-toggle="tooltip" data-placement="top" title="Introduce el codigo del denunciante en formato 00000000">
+        </div>
+        <div class="reportListForm__option">
+            <label for="priority">Prioridad:</label>
+            <select class="form-control" name="priority" type="text" id="priority" formControlName="priority">
+              <option value="alta">Alta</option>
+              <option value="media">Media</option>
+              <option value="baja">Baja</option>
+            </select>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" name="cyberReport" class="custom-control-input" id="cyberReport" formControlName="cyberReport">
+          <label class="custom-control-label" for="cyberReport">Check this custom checkbox</label>
+        </div>
+        <div class="reportListForm__option">
+            <p for="desc">Descripcion:</p>
+            <textarea class="form-control" rows="10" cols="60" name="desc" type="text" id="desc" formControlName="desc"></textarea>
+        </div>
+        <div class="container buttonEdit">
+            <div class="reportListForm__button">
+                <button class="btn btn-success" type="submit" [disabled]="!nameForm.valid">Enviar Formulario</button>
+            </div>
+            <div class="reportListForm__button">
+                <button class="btn btn-primary" routerLink="/list">Volver</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+

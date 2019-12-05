@@ -1,0 +1,8 @@
+<div>
+	<app-navbar></app-navbar>
+	<div *ngIf="idReportShow == undefined">
+		<app-denuncias-list [reports]="reports" (changeSelectedReport)="updateSelectedReport($event)"></app-denuncias-list>
+	</div>
+	<app-denuncia-detail [idReportShow]="idReportShow"></app-denuncia-detail>
+	<footer class="zaragozaFooter"></footer>
+</div>

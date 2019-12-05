@@ -1,0 +1,38 @@
+.zaragozaReportForm{
+	margin-top: 50px;
+}
+
+.reportListForm{
+	padding: 2% 10% 2% 10%;
+}
+
+.buttonEdit{
+	padding: 2%;
+	.reportListForm__button{
+		padding: 1%;
+	}
+}
+
+/*
+.reportListForm{
+	background-color: lightgrey;
+	padding: 0.5% 2% 1% 2%;
+	width: 500px;
+	&__title{
+		margin-top:0px;
+	}
+	&__option{
+		margin-bottom: 10px;
+	}
+	&__button{
+		margin-top: 10px;
+		button{
+			padding: 5px;
+		}
+	}
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+*/
