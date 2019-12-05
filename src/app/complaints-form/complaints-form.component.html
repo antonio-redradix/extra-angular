@@ -1,0 +1,19 @@
+<p class="title">Formulario de creación de denuncia</p>
+<!-- //Creo el formulario -->
+<form class="formulario" [formGroup]="nameForm" (ngSubmit)="onSubmit()">
+        Nombre Denuncia <br>
+        <input type="text" formControlName="name" placeholder="Nombre"> <br>
+        Fecha <br>
+        <input type="text" formControlName="date" placeholder="Fecha"> <br>
+        Denunciante <br>
+        <input type="text" formControlName="id" placeholder="DNI"> <br>
+        Prioridad <br>
+        <input type="text" formControlName="priority" placeholder="Alta/Baja"> <br>
+        Ciberdelito <br>
+        <input type="text" formControlName="cibercrime" placeholder="Si/No"> <br>
+        Declaracion <br>
+        <input type="text" formControlName="declaration" placeholder="Declaracion"> 
+        <br><br>
+        <button type="submit" [disabled]="!nameForm.valid">Submit</button>
+    </form>
+    

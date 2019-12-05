@@ -1,0 +1,11 @@
+<h2 class="mainTitle">Denuncias Registradas</h2>
+
+<div class="mainSection"> 
+    <div class="mainSection__compliant" *ngFor="let complaint of complaints; index as id"> 
+        <p class="mainSection__compliant__name" routerLink="/detail/{{id}}">{{complaint.name}}</p>
+        <p class="mainSection__compliant__id">Denunciante: {{complaint.id}}</p>
+       <button class="mainSection__compliant__buttons"routerLink="/form/{{id}}">Editar</button>  <button class="mainSection__compliant__buttons" (click)="remove(id)">Archivar</button>
+    </div>
+</div>
+<br><br>
+<button class="button" routerLink="/add"> Añadir Denuncia </button>

@@ -1,0 +1,15 @@
+.mainSection{
+    margin-left: 20px;
+    background-color: rgb(133, 193, 233);
+    padding: 2%;
+    width:500px;
+    border-radius: 10px;
+    font-family: Calibri;
+    font-size: 18px;
+        &__mainTitle{
+        margin-top: 0%;
+        }
+        &__data{
+        margin: 5px 0px 0px 50px;
+        }
+}
