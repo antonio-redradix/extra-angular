@@ -1,0 +1,38 @@
+form{
+    background-color: lightblue;
+    border: 2px solid #EFF0F2;
+    padding-left: 6%;
+    font-size: 20px;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.descripcion{
+    width: 80%;
+    height: 20vh;
+    font-style: italic;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.titulo{
+    width:50%;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+div{
+    width: 80%;
+   padding-left: 16px;
+   padding-bottom: 6px;
+    background-color:lightskyblue; 
+}
+
+input[type="button"],input[type="submit"]{
+    background-color: linen;
+    border-radius: 35%;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}

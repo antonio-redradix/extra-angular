@@ -1,0 +1,8 @@
+<app-denuncias-list *ngIf="selected===undefined" [denuncias]="denuncias" (selectdenuncia)="clickHandler($event)">
+      
+</app-denuncias-list>
+<input type="button" *ngIf="selected===undefined" [routerLink]="['/add']"  value="Registrar">
+<app-denuncias-detail [selected]="selected" ></app-denuncias-detail>
+
+<!--
+   --->

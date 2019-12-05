@@ -1,0 +1,28 @@
+<form  [formGroup]="denunciaForm" (ngSubmit)="onSubmit()">
+        <div><h3>Titulo</h3> <input placeholder="Breve descripcion denuncia" class="titulo" type="text"  formControlName="name"></div>
+        
+        
+        <div><h3>Fecha</h3> <input type="date"  formControlName="fecha"></div>
+       
+        <div><h3>Denunciante</h3> <input type="text" placeholder="DNI denunciante"  formControlName="denunciante"></div>
+       
+        <div><h3>Prioridad</h3>
+                <input type="radio" name="prioridad" value="Muy alta" formControlName="prioridad">Muy alta<br>
+                <input type="radio" name="prioridad" value="Alta" formControlName="prioridad"> Alta<br>
+                <input type="radio" name="prioridad" value="Media" formControlName="prioridad" > Media<br>
+                <input type="radio" name="prioridad" value="Baja" formControlName="prioridad"> Baja<br>
+                <input type="radio" name="prioridad" value="Muy baja" formControlName="prioridad">Muy baja<br></div>
+        <br>
+        <div>
+                        <h3>Ciberdelito <input type="checkbox"  formControlName="ciberdelito"></h3>
+        </div>
+        
+         
+  <div><h3>Descripcion</h3> <textarea class="descripcion" placeholder="Descripcion detallada denuncia"  formControlName="descripcion"></textarea></div>
+       
+        
+        <input type="submit" [disabled]="!denunciaForm.valid" >
+        
+        </form>
+        <input  type="button" value="Volver" [routerLink]="['/list']">
+        

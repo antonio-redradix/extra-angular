@@ -1,0 +1,16 @@
+<h1>Comisaría de Zaragoza</h1>
+
+<div>
+                <h2>Denuncias Registradas</h2>
+        <div  *ngFor="let d of denuncias">
+        
+                <span (click)="sdenuncia(d)" [routerLink]="['/list', d.id]" class="container">{{d.name}}                Denunciante : {{d.denunciante}}      
+                        <input [routerLink]="['/add',d.id]" type="button" value="Editar"> <input type="button" value="Archivar" (click)="borrardenuncia(d)"></span>  
+                
+          
+         
+          
+      </div>
+     
+</div>
+

@@ -1,0 +1,21 @@
+<div *ngIf="selected!==undefined">
+    <h1>Denuncia nº {{selected.id}} </h1>
+        <br>
+        <div class="separacion">
+                Titulo: {{selected.name}}
+                <br>
+                Fecha: {{selected.fecha}}
+                <br>
+                Denunciante: {{selected.denunciante}}
+                <br>
+                Prioridad: {{selected.prioridad}}
+                <br>
+                Ciberdelito: {{selected.ciberdelito}}
+        </div>
+       
+        <div class="separacion">
+        <h2>Declaracion</h2> 
+        {{selected.descripcion}}
+    </div>
+        <input  type="button" value="Volver" [routerLink]="['/list']">
+    </div>  
