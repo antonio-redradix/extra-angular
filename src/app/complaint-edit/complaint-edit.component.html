@@ -1,0 +1,19 @@
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input class="form__element" type="text" formControlName="name" placeholder="Nombre"><br>
+    <input class="form__element" type="text" formControlName="code" placeholder="DNI"><br>
+    <input class="form__element" type="text" formControlName="number" placeholder="Número de denuncia"><br>
+    <input class="form__element" type="text" formControlName="date" placeholder="Fecha"><br>
+    <select name="cybercrime" class="form__element" formControlName="priority">
+        <option selected disabled>¿Prioridad?</option>
+        <option value="ALTA">ALTA</option> 
+        <option value="MEDIA">MEDIA</option>
+        <option value="BAJA">BAJA</option>
+    </select><br>
+    <select name="cybercrime" class="form__element" formControlName="type">
+        <option selected disabled>¿Cibercrimen?</option>
+        <option value="SÍ">SÍ</option> 
+        <option value="NO">NO</option> 
+    </select><br>
+    <input class="form__element" type="text" formControlName="declaration" placeholder="Declaración"><br>
+    <input class="form__element" type="submit" value="Editar la denuncia" [disabled]="!form.valid">
+</form>
