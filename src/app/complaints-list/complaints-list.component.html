@@ -1,0 +1,15 @@
+<h2>Denuncias registradas</h2>
+<div class="container">
+    <div class="container__complaint" *ngFor="let complaints of complaints; index as i">
+        <p routerLink="/detail/{{i}}" class="container__complaint__name">{{complaints.name}}</p>        
+        <p class="container__complaint__complainant">{{complaints.complainant}}</p>
+        <div class="container__complaint__button"><button routerLink="/form/{{i}}">Editar</button> <button (click)="delete(i)">Archivar</button></div>
+    </div>
+</div>
+<br>
+
+<div>
+    <button routerLink="/form">Registrar nueva denuncia</button>
+</div>
+
+<!-- routerlink para qeu cu<ndo clickes qte lleve al path -->

@@ -1,0 +1,17 @@
+.container {
+    background-color: cadetblue;
+    width: 80%;
+    height: 70%;
+    position: center;
+    font-family: Arial;
+    font-size: 15px;
+    &__complaint {
+        padding: 12px;
+        &__title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    
+    }
+
+}
