@@ -1,0 +1,84 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+//------------RESET------------//
+
+h1 {
+    font-size: 25px ;
+    margin: 70px 0px 0px 400px;
+    font-weight: bold;
+}
+.report {
+    font-size: 18px;
+    width: 600px;
+    height: 300px;
+    background-color: rgb(92, 124, 98);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    margin: 10px 0px 0px 400px;
+    box-sizing: border-box;
+    &__content{
+        margin: 10px 0px;
+        display: flex;
+        p {
+            width: 180px;
+            font-weight: bold;
+        }
+        span {
+            width: 250px;
+        }
+        button {
+            width: 80px;
+        }
+    }
+}
+.new-report {
+    margin: 5px 0px 0px 400px;
+    button {
+        width: 150px;
+        padding: 3px 10px;
+        background-color: rgb(92, 124, 98);
+    }
+}

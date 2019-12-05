@@ -1,0 +1,29 @@
+<form [formGroup]="formForm" (ngSubmit)="onSubmit()" class="main-form">
+    <div class="main-form--title">
+        <p>Título:</p> 
+        <input type="text" formControlName="title" placeholder="Introduzca el título">
+    </div>
+    <div class="main-form--date">
+        <p>Fecha:</p> 
+        <input type="text" formControlName="date" placeholder="Introduzca la fecha">
+    </div>
+    <div class="main-form--complainant">
+        <p>Denunciante:</p> 
+        <input type="text" formControlName="complainant" placeholder="Número de denuncia">
+    </div>
+    <div class="main-form--priority">
+        <p>Prioridad:</p> 
+        <input type="text" formControlName="priority" placeholder="SI/NO">
+    </div>
+    <div class="main-form--cibercrime">
+        <p>Ciberdelito:</p> 
+        <input type="text" formControlName="cibercrime" placeholder="SI/NO">
+    </div>
+    <div class="main-form--declaration">
+        <p>Declaración:</p> 
+        <textarea  type="text" formControlName="declaration" placeholder="Declaración" rows="4" cols="50"> 
+            
+        </textarea>
+    </div>
+    <button type="submit" [disabled]="!formForm.valid" >Submit</button>
+</form>

@@ -1,0 +1,14 @@
+<h1>Denuncias registradas</h1>
+<div class="report">
+  <div *ngFor="let report of report; index as i" class="report__content" >
+    <p routerLink="/detail/{{i}}"> {{report.title}}</p>
+    <span> Denunciante: {{report.complainant}} </span>
+    <button> Editar </button>
+    <button (click)="delete(i)">Archivar </button>    
+  </div>
+</div>
+<div class="new-report">
+  <button routerLink="/form">Registrar denuncia</button>
+</div>
+
+
