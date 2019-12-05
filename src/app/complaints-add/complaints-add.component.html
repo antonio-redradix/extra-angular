@@ -1,0 +1,35 @@
+<div class="container">
+    <form [formGroup] = "complaintForm" (ngSubmit)="onSubmit()" class="myForm">
+        <div class="form--line">
+            <div class="form--elem">
+                <label class="paddingRight">Título</label>
+                <input type="text" formControlName="title" class="textAreaColor textArea">
+            </div>
+            <div class="form--elem">
+                <label class="paddingRight">Fecha</label>
+                <input type="text" formControlName="date" class="textAreaColor textArea">
+            </div>
+        </div>
+        <div class="form--line">
+            <div class="form--elem">
+                <label class="paddingRight">Denunciante</label>
+                <input type="text" formControlName="complainer" class="textAreaColor textArea">
+            </div>
+            <div class="form--elem">
+                <label class="paddingRight">Prioridad</label>
+                <input type="boolean" formControlName="priority" class="textAreaColor textArea">
+            </div>
+            <div class="form--elem">
+                <input type="checkbox" formControlName="cyber">
+                <label>Ciber</label>
+            </div>
+        </div>
+        <div class="form--elem">
+            <div><label>Declaración</label></div>
+            <textarea type="text" formControlName="declaration" class="declaration textAreaColor"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Validar" [disabled]="!complaintForm.valid" class="myButton">
+        </div> 
+    </form>
+</div>

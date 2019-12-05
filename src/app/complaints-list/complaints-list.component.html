@@ -1,0 +1,14 @@
+<div *ngIf="complaintNumber > 0"> 
+    <h2 class="marginBottom">Denuncias Registradas</h2>
+    <div class="complaintsContainer">
+        <div class="complaint" *ngFor="let complaint of complaints; index as i">
+            <span routerLink="/list/{{i}}" class="handPointer complaint--texts"><span class="complaint--texts--elem"><b>{{complaint.title}}</b></span><span class="complaint--texts--elem">Denunciante: {{complaint.complainer}}</span></span><span class="complaint--buttons"><button class="handPointer myButton" routerLink="/edit/{{i}}">Editar</button><button class="handPointer myButton"  (click)="deleteComplaint(i)">Archivar</button></span>
+        </div>
+    </div>
+</div>
+<div *ngIf="complaintNumber == 0">
+    <h2>No hay denuncias actualmente</h2>
+</div>
+<div>
+    <button routerLink="/add" class="handPointer myButton">Registrar Nueva Denuncia</button>
+</div>

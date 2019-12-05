@@ -1,0 +1,11 @@
+<div class="container">
+    <h2 class="title">{{complaintDetailed.title}}</h2>
+    <div class="rowContainer">
+        <div class="element"><p class="paddingRight">Fecha:</p><p>{{complaintDetailed.date}}</p></div>
+        <div class="element"><p class="paddingRight">Denunciante:</p><p>{{complaintDetailed.complainer}}</p></div>        
+        <div class="element"><p class="paddingRight">Prioridad:</p><p>{{complaintDetailed.priority}}</p></div>
+        <div class="element"><span class="paddingRight">Ciberdelito:</span><span>{{complaintDetailed.cyber ? 'Sí' : 'No'}}</span></div>
+    </div>
+    <div class="marginTop marginLeft lightcolor"><p>Declaración:</p></div>
+    <div class="element"><p>{{complaintDetailed.declaration}}</p></div>
+</div>

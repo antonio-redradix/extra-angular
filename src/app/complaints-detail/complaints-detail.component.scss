@@ -1,0 +1,53 @@
+p {
+    margin: 0;
+}
+
+.container {
+    background-color: rgb(65, 58, 133);
+    width: 60%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rowContainer {
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.element {
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    background-color: rgb(186, 192, 240);
+    padding: 6px;
+    margin: 6px;
+}
+
+.paddingRight {
+    padding-right: 8px;
+}
+
+.marginTop {
+    margin-top: 6px;
+}
+
+.marginLeft {
+    margin-left: 6px;
+}
+
+.title {    
+    margin-bottom: 12px;
+    margin-top: 0;
+    padding: 6px;
+    border-radius: 3px;
+    background-color: rgb(31, 27, 68);
+}
+
+.lightcolor {
+    color:  rgb(186, 192, 240);
+}
