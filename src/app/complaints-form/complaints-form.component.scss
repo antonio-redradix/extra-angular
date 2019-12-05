@@ -44,6 +44,13 @@
     padding: 2%;
 }
 
+.message {
+    color: rgb(148, 30, 30);
+    font-weight: 500;
+    width: 80%;
+    margin: 0 auto;
+}
+
 @media only screen and (max-width: 750px) {
     .imgForm {
         display: none;

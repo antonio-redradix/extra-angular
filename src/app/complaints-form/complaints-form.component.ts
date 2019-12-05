@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ComplaintsService } from '../../app/complaints.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators, MaxLengthValidator } from '@angular/forms';
 
 @Component({
   selector: 'app-complaints-form',
@@ -9,21 +9,30 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class ComplaintsFormComponent implements OnInit {
 
+  maxLength: number =9;
+  success: string;
+
   complaintForm = new FormGroup({
-    title: new FormControl(''),
-    date: new FormControl(''),
-    whistleblower: new FormControl(''),
-    priority: new FormControl(''),
-    cyberSecurity: new FormControl(''),
-    declaration: new FormControl(''),
+    title: new FormControl('', Validators.required),
+    date: new FormControl('', Validators.required),
+    whistleblower: new FormControl('', Validators.required),
+    priority: new FormControl('', Validators.required),
+    cyberSecurity: new FormControl('', Validators.required),
+    declaration: new FormControl('', Validators.required),
   });
 
   constructor(private complaintsService: ComplaintsService) { }
 
   onSubmit() {
-    let newComplaint = this.complaintForm.value;
-    this.complaintsService.addComplaint(newComplaint);
+    if (this.complaintForm.valid) {
+      console.log('Datos enviados!!');
 
+      let newComplaint = this.complaintForm.value;
+      this.complaintsService.addComplaint(newComplaint);
+
+      this.complaintForm.reset();
+      this.success = 'Delito añadido correctamente a la base de datos'
+    }
   }
 
   ngOnInit() {
