@@ -1,0 +1,13 @@
+@import '../commonStyles.scss';
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    cursor: url('../assets/img/police.cur'), auto;
+
+    &__img {
+        height: 70px;
+    }
+}

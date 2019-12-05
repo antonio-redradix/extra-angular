@@ -1,0 +1,44 @@
+<main class="container">
+    <h2 class="subtitle">Detalles de la denuncia</h2>
+
+    <section *ngIf="complaintSelected == undefined" class="detail">
+        <div class="detail__box">
+            <p class="detail__box__title">Título:</p>
+            <p class="detail__box__text">{{complaintList[numSelected].title}}</p>
+        </div>
+
+        <div class="detail__box">
+            <p class="detail__box__title">Fecha:</p>
+            <p class="detail__box__text">{{complaintList[numSelected].date}}</p>
+        </div>
+
+        <div class="detail__box"> 
+            <p class="detail__box__title">Denunciante:</p>
+            <p class="detail__box__text">{{complaintList[numSelected].whistleblower}}</p>
+        </div>
+
+        <div class="detail__box">
+            <p class="detail__box__title">Prioridad:</p>
+            <p class="detail__box__text">{{complaintList[numSelected].priority}}</p>
+        </div>
+
+        <div class="detail__box">
+            <p class="detail__box__title">Ciberdelito:</p>
+            <p class="detail__box__text">{{complaintList[numSelected].cyberSecurity}}</p>
+        </div>
+
+        <div class="detail__box">
+            <p class="detail__box__title">Declaración:</p>
+            <p class="detail__box__text">{{complaintList[numSelected].declaration}}</p>
+        </div>
+
+    </section>
+
+    <section class="btnBox">
+        <div class="btn btnBox__detail" routerLink="/list">Volver al listado</div>
+        <div class="btn btnBox__detail">Editar</div>
+    </section>
+    
+</main>
+
+

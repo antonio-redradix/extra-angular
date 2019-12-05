@@ -1,0 +1,36 @@
+@import '../../commonStyles.scss';
+
+.detail {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 20px;
+    height: 75%;
+    box-shadow: 0 0 2px 2px inset $terciary-color;
+    overflow: auto;
+
+    &__box {
+        text-align: left;
+        padding: 0.4rem 0;
+
+        &__title {
+            font-weight: 700;
+            letter-spacing: 0.3rem;
+        }
+
+        &__text {
+            padding: 7px;
+            text-align: justify;
+        }
+    }
+}
+
+.btnBox {
+    display: flex;
+    justify-content: space-around;
+    padding: 2%;
+
+    &__detail {
+        width: 30%;
+    }
+}

@@ -1,0 +1,58 @@
+<main class="container">
+    <img class="imgForm" src="../../assets/img/wiggum.gif" alt="wiggum" srcset="">
+
+    <h2 class="subtitle">Añadir un nuevo delito</h2>
+
+    <form class="complaintForm" [formGroup]="complaintForm" (ngSubmit)="onSubmit()" action="#">
+        <div class="complaintForm__box">
+            <label class="complaintForm__label" for="title">Nombre del delito: </label>
+            <input class="complaintForm__input" formControlName="title" type="text" name="title" id="" autofocus>
+        </div>
+    
+        <div class="complaintForm__box">
+            <label class="complaintForm__label" for="date">Fecha: </label>
+            <input class="complaintForm__input" formControlName="date" type="date" name="date" id="">
+        </div>
+    
+        <div class="complaintForm__box">
+            <label class="complaintForm__label" for="whistleblower">Denunciante: </label>
+            <input class="complaintForm__input" formControlName="whistleblower" type="text" name="whistleblower" id="">
+        </div>
+    
+        <div class="complaintForm__box">
+            <label class="complaintForm__label" for="priority">Prioridad: </label>
+            <div class="complaintForm__input">
+                <input type="radio" value="2" formControlName="priority" name="priority" id="">Hight
+                <input type="radio" value="1" formControlName="priority" name="priority" id="">Medium
+                <input type="radio" value="0" formControlName="priority" name="priority" id="">Low
+            </div>
+        </div>
+    
+        <div class="complaintForm__box">
+            <label class="complaintForm__label" for="cyberSecurity">Ciberseguridad: </label>
+            <div class="complaintForm__input">
+                <input type="checkbox" formControlName="cyberSecurity" value="1" name="cyberSecurity" id="">Yes
+                <input type="checkbox" formControlName="cyberSecurity" value="0" name="cyberSecurity" id="">No
+            </div>
+        </div>
+    
+        <div class="complaintForm__box">
+            <label class="complaintForm__label" for="declaration">Declaración: </label>
+            <textarea rows="4" type="text" formControlName="declaration" class="complaintForm__input"></textarea>
+        </div>
+    
+        <div class="inputSubmit">
+            <input  type="submit"  name="submit" id="">
+        </div>
+        <div class="btnBox">
+            <div class="btn" routerLink="/">Volver a lista de delitos</div>
+        </div>
+    </form>
+
+    
+    
+</main>
+
+
+
+

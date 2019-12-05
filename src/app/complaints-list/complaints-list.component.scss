@@ -1,0 +1,49 @@
+@import '../../commonStyles.scss';
+
+.complaint {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 10px;
+    
+
+    &__title {
+        width: 30%;
+        font-weight: bold;
+    }
+
+    &__date {
+        width: 40%;
+        text-align: center;
+    }
+
+    &__btnBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 30%;
+    }
+}
+
+.complaintBox {
+    background-color: white;
+    border: 1px solid $terciary-color;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 2px inset gray;
+    padding: 20px 0;
+    height: 70%;
+    overflow: auto;
+}
+
+.btnBox {
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+
+    &__list {
+        width: 30%;
+    }
+}
+
+
+
