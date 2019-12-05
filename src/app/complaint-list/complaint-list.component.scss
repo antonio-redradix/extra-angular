@@ -14,11 +14,5 @@
         border: 0;
         width: 80px;
         margin-left: 15px;
-        &--add{
-            @extend .sectionList__button;
-            width: 160px;
-            margin-left: 0px;
-            background-color: #D3D3D3;
-        }
     }
 }

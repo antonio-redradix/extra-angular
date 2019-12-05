@@ -30,7 +30,8 @@ export class ComplaintFormComponent implements OnInit {
   onSubmit() {
     this.form.value.id = this.id;
     this.complaints.push(this.form.value);
-    // window.location.replace("/list");
+    localStorage.complaints = JSON.stringify(this.complaints);
+    window.location.replace("/list");
   }
 
   constructor(private complaintsService: ComplaintsService, private route: ActivatedRoute) { }

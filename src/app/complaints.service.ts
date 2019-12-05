@@ -15,6 +15,9 @@ export class ComplaintsService {
   constructor() { }
 
   getComplaints(): Complaint[]{
-    return this.complaints;
+    if(localStorage.complaints == undefined){
+        localStorage.setItem("complaints", JSON.stringify(this.complaints));
+    }
+    return JSON.parse(localStorage.complaints);
   }
 }

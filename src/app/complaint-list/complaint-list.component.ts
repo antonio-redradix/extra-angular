@@ -19,6 +19,7 @@ export class ComplaintListComponent implements OnInit {
 
   delete(index){
     this.complaints.splice(index,1);
+    localStorage.complaints = JSON.stringify(this.complaints);
   }
 
   ngOnInit() {
