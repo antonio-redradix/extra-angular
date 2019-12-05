@@ -1,0 +1,26 @@
+.badge{
+    &__denuncia{
+        width: 500px;
+        background-color: lightblue;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        &__titulo{
+            margin-right: 10px;
+        }
+        &__denunciante{
+            color: gray;
+            margin-right: 10px;
+        }
+        &__button--white{
+            background-color: white;
+        }
+    }
+}
+.button--register{
+    margin-top: 10px;
+    background-color: lightblue;
+}

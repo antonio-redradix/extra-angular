@@ -1,0 +1,18 @@
+<div *ngIf="denuncia !== undefined">
+    <h3> Denuncia nº {{denuncia.id}} </h3>
+    <b> Titulo: </b> {{denuncia.titulo}}
+    <br>
+    <b> Fecha: </b> {{denuncia.fecha}}
+    <br>
+    <b> Denunciante: </b> {{denuncia.denunciante}}
+    <br>
+    <b> Prioridad: </b> {{denuncia.prioridad}}
+    <br>
+    <b> Ciberdelito: </b> {{denuncia.ciberdelito}}
+    <br>
+    <br>
+    <b> Descripcion: </b>
+    <br><br>
+    {{denuncia.descripcion}}
+    <br><br>
+</div>

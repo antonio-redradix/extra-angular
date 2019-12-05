@@ -1,0 +1,26 @@
+<p>FORMULARIO</p>
+
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    Titulo: <br>
+    <input type="text" name="titulo" formControlName="titulo"> 
+    <br><br>
+    Fecha: <br>
+    <input type="date" name="fecha" formControlName="fecha">
+    <br><br>
+    Denunciante: <br>
+    <input type="text" name="denunciante" formControlName="denunciante">
+    <br><br>
+    Prioridad: <br>
+        <input type="radio" name="prioridad" value="baja" formControlName="prioridad"> Baja <br>
+        <input type="radio" name="prioridad" value="media" formControlName="prioridad"> Media <br>
+        <input type="radio" name="prioridad" value="alta" formControlName="prioridad"> Alta <br>
+    <br>
+    Ciberdelito: <br>
+        <input type="radio" name="ciberdelito" value="si" formControlName="ciberdelito"> Si <br>
+        <input type="radio" name="ciberdelito" value="no"formControlName="ciberdelito" > No <br>
+    <br>
+    Descripcion: <br>
+    <textarea type="text" name="descripcion" formControlName="descripcion"></textarea>
+    <br><br>
+    <button type="submit" [disabled]="!formulario.valid">Registrar denuncia</button>
+</form>

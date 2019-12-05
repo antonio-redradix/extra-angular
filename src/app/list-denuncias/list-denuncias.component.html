@@ -1,0 +1,12 @@
+<h1> Comisaría Zaragoza </h1>
+<h3> Denuncias registradas </h3>
+<div (click)="clickHandler(denuncia)" *ngFor="let denuncia of denuncias; index as i">
+    <span class="badge" routerLink="/list/{{i+1}}">
+        <div class="badge__denuncia">
+            <div class="badge__denuncia__titulo"> {{denuncia.titulo}} </div>
+            <div class="badge__denuncia__denunciante">Denunciante: {{denuncia.denunciante}}</div>
+            <button class="badge__denuncia__button--white" routerLink="/edit/{{i+1}}">Editar</button> <button class="badge__denuncia__button--white" (click)="clickRemoveHandler(denuncia)">Archivar</button>
+        </div>
+    </span> 
+</div>
+<button class="button--register" routerLink="/add">Registrar denuncia</button>

@@ -1,0 +1,6 @@
+<div>
+    <app-list-denuncias [denuncias]="denuncias" (denunciaClicked)="denunciaClickHandler($event)" *ngIf="selectedDenuncia===undefined"> </app-list-denuncias>
+</div>
+<div>
+    <app-detail-denuncias [denuncia]="selectedDenuncia"></app-detail-denuncias>
+</div>
