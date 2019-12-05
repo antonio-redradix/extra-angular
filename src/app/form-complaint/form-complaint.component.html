@@ -1,0 +1,39 @@
+
+<form class="formGroup" [formGroup] ="complaintForm" (ngSubmit)="onSubmit()">
+        <img routerLink="/list" src="assets/img/back.png">
+        <div class="formElem">
+                <h1>New Complaint</h1>
+        </div>
+        <div class="formElem">
+                <label>Title</label>
+                <input type="text" name="title" formControlName="title" autocomplete="off">
+        </div>
+        <div class="formElem">
+                <label>Id</label>
+                <input type="number" name="id" formControlName="id" autocomplete="off">
+        </div>
+        <div class="formElem">
+                <label>Date</label>
+                <input type="text" name="date" formControlName="date" autocomplete="off">
+        </div>
+        <div class="formElem">
+                <label>Complainant</label>
+                <input type="text" name="complainant" formControlName="complainant" autocomplete="off">
+        </div>
+        <div class="formElem">
+                <label>Priority</label>
+                <input type="text" name="priority" formControlName="priority" autocomplete="off">
+        </div>
+        
+        <div class="formElem">
+                <label>Statement</label>
+                <textarea class="formElem__statement" type="text" name="statement" formControlName="statement" autocomplete="off"></textarea>
+        </div>
+        <div class="formElem" id="cybercrime">
+                <label>Cybercrime</label>
+                <input type="checkbox" name="cybercrime" formControlName="cybercrime" autocomplete="off">
+        </div>
+        <button class="submitBtn" type="submit" [disabled]="!complaintForm.valid" >SUBMIT</button>
+</form>
+        
+    

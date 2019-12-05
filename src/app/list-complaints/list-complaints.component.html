@@ -1,0 +1,16 @@
+
+<div class="board">
+    <h1>Comisaría de Zaragoza</h1>
+    <h2>Denuncias registradas</h2>
+    <div *ngFor = "let complaint of complaintsList; index as i" class="board__complaints">
+        <div class="complaintRow">
+            <div class="complaintRow__title">{{complaint.title}}</div><div class="complaintRow__complainant">{{complaint.complainant}}</div>
+        </div>
+        <div class="icons">
+            <img src="assets/img/edit.png" routerLink="/form/{{i+1}}"><img src="assets/img/archive.png" (click)="delete(i)"><img src="assets/img/glass.png" routerLink="/list/{{i+1}}">
+        </div>
+    </div>
+    <button routerLink="/form" class="board__submitBtn"><img src="assets/img/add.png">ADD COMPLAINT</button>
+</div>
+
+

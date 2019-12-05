@@ -1,0 +1,57 @@
+.board{
+    font-family: 'Roboto';
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 700px;
+    padding: 20px;
+    border: solid 1px lightgray;
+    border-radius: 15px;
+    &__complaints{
+        border: solid 1px lightgray;
+        border-radius: 15px;
+        border-collapse: collapse;
+        padding: 20px 10px;
+        line-height: 20px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        
+    }
+    &__submitBtn{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        margin: 5% auto;
+        font-family: 'Roboto';
+        font-weight: bold;
+        padding: 10px;
+        width: 180px;
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.complaintRow{
+    &__title{
+        display: inline-block;
+        font-weight: bold;
+        width: 170px;
+    }
+    &__complainant{
+        display: inline-block;
+        width: 130px;
+    }
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    img{
+        width: 25px;
+        height: 25px;
+    }
+}
