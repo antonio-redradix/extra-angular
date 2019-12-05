@@ -1,0 +1,5 @@
+<header>Comisaría de Zaragoza</header>
+<i class="fas fa-sign-out-alt" (click)="logout()" *ngIf="readLocalStorage(loged) === 'true'"></i>
+<main>
+  <router-outlet></router-outlet>
+</main>

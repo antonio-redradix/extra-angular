@@ -1,0 +1,11 @@
+<div class="board">
+    <h2>Autentificación</h2>
+    <form [formGroup]="login" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="Número de usuario" formControlName="user"><br>
+        <input type="password" placeholder="Contraseña" formControlName="password"><br>
+        <button type="submit" [disabled]="!login.valid">Acceder</button>
+    </form>
+</div>
+<p>User: 1234, Pass: 1234. <br>
+    Se conservan datos al cerrar sesion
+</p>

@@ -1,0 +1,19 @@
+<h2>Nueva denuncia</h2>
+<div class="complaintForm">
+    <form [formGroup]="addComplaint" (ngSubmit)="onSubmit()">
+        <div><span> Título  </span>
+        <input type="text" formControlName="title"></div><br>
+        <div><span> Denunciante  </span>
+        <input type="text" formControlName="accuser"></div> <br>
+        <div><span> Prioridad  </span>
+        <select formControlName="priority">
+            <option *ngFor="let priorityLevel of priorities" [ngValue]="priorityLevel">
+                {{ priorityLevel }}
+            </option>
+        </select> </div><br>
+        <div>Cibercrimen<input type="checkbox" formControlName="ciberCrime"> </div><br>
+        <div> Contenido de la denuncia  </div><br> 
+        <textarea type="text" formControlName="text"></textarea><br>
+        <button type="submit" [disabled]="!addComplaint.valid">Añadir denuncia</button>
+    </form>
+</div>

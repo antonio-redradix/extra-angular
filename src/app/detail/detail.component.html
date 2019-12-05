@@ -1,0 +1,10 @@
+<div class="board">
+    <h2>Denuncia nº {{selectedComplaint.id}}</h2>
+    <h3>Título: {{selectedComplaint.title}}</h3>
+    <h4>Fecha: {{selectedComplaint.date}}</h4>
+    <h4>Denunciante: {{selectedComplaint.accuser}}</h4>
+    <h4>Prioridad: {{selectedComplaint.priority}}</h4>
+    <h4>Ciberdelito: <span *ngIf="selectedComplaint.ciberCrime">Si</span> <span *ngIf="!selectedComplaint.ciberCrime">No</span></h4>
+    <h3>Declaración:</h3>
+    <p>{{selectedComplaint.text}}</p>
+</div>

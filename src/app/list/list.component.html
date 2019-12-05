@@ -1,0 +1,12 @@
+<h2>Denuncias registradas</h2>
+<div class="board">
+    <div class="complaint" *ngFor="let complaint of complaints; index as i"  routerLink="./{{i}}">
+        <div><p>{{complaint.title}}</p> </div>
+        <p>Denunciante: {{complaint.accuser}}</p>
+        <div class="complaint__btn-group">
+            <button routerLink="/edit/{{i}}">Editar</button>
+            <button (click)="delete(i)">Archivar</button>
+        </div>
+    </div>
+</div>
+<button routerLink="/add" id="newComplaintBtn">+ Añadir denuncia</button>
