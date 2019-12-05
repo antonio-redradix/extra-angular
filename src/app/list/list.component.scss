@@ -1,0 +1,32 @@
+.mainlist{
+    background-color: rgb(243, 242, 242);
+    display: block;
+    width: fit-content;
+    height: auto;
+    border-radius: 3px;
+    &__presentation--citizen{
+    margin-left:10px;  
+    width: 200px;
+    font-weight: 100;
+    }
+    &__presentation--description{
+        margin-left:20px;  
+        width: 200px;
+        font-weight:bold ;
+        }
+
+
+button{
+    display: flex;
+    margin-right: 10px;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+
+div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+}

@@ -1,0 +1,11 @@
+<h2>Denuncias registradas</h2>
+<div class="mainlist">
+  <div class="mainlist__presentation" *ngFor="let complaint of complaints; index as id" >
+    <div><h4 class="mainlist__presentation--description" routerLink="/detail/{{id}}">{{complaint.title}}</h4>
+    <h4 class="mainlist__presentation--citizen">Denunciante: {{complaint.denunciator}}</h4></div>
+    <div class="button">
+      <button routerLink="/form/{{id}}">Editar</button> <button (click)="clickDelete(id)" >Archivar</button>
+    </div>
+  </div>
+  <button routerLink="/form">Registrar denuncia</button>
+</div>

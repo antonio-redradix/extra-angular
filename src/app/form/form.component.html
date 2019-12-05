@@ -1,0 +1,16 @@
+        <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+          <div>Caso</div>
+          <input type="text" formControlName="title" placeholder="Caso"><br>
+          <div>Fecha</div>
+          <input type="text" formControlName="date" placeholder="dd/mm/aa"><br>
+          <div>Denunciante</div>
+          <input type="text" formControlName="denunciator" placeholder="DNI"><br>
+          <div>Prioridad</div>
+          <input type="text" formControlName="priority" placeholder="Alta/Baja"><br>
+          <div>Ciberdelito</div>
+          <input type="text" formControlName="cibercrime" placeholder="Si/No"><br>
+          <div>Descripción</div>
+          <input type="text" formControlName="description" placeholder="Descripcion"><br>
+          <button type="submit" [disabled]="!createForm.valid">Submit</button>
+          <button type="text" routerLink="/list">Volver</button>
+        </form>
