@@ -8,15 +8,29 @@ import { ActivatedRoute} from '@angular/router';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  complaints=undefined
+  complaints=undefined 
+  
   constructor(private complaintService:ComplaintService, private route: ActivatedRoute) { }
-
+ 
   clickDelete(id){
-    this.complaintService.getComplaint().splice(id,1)
-    console.log(id)
+    // if(JSON.parse(sessionStorage.getItem('sessionData'))==null){
+    // this.complaints.splice(id,1)
+    // sessionStorage.setItem('sessionData',JSON.stringify(this.complaints))}
+    // else{
+      this.complaints.splice(id,1)
+      sessionStorage.setItem('sessionData',JSON.stringify(this.complaints))
+    //}
+  
   }
 
   ngOnInit() {
-  this.complaints=this.complaintService.getComplaint()
+  if(JSON.parse(sessionStorage.getItem('sessionData'))==null){
+    console.log(JSON.parse(sessionStorage.getItem('sessionData')))
+  this.complaints=this.complaintService.getComplaints()}
+  else{
+  this.complaints=JSON.parse(sessionStorage.getItem('sessionData'))
+  console.log(JSON.parse(sessionStorage.getItem('sessionData')))
+  }
+  
   }
 }
