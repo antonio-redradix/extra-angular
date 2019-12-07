@@ -17,6 +17,10 @@ export class ComplaintsEditFormComponent implements OnInit {
   numSelected: number;
   complaintList: ComplaintInterface [];
 
+  ngOnChanges(): void {
+    this.numSelected = 3;
+  }
+
   complaintForm = new FormGroup({
     title: new FormControl(''),
     date: new FormControl(''),
@@ -30,7 +34,7 @@ export class ComplaintsEditFormComponent implements OnInit {
 
   update = this.complaintsService.updateComplaintList;
 
-  onSubmit() {
+  onSubmit(): void {
     
     console.log('Datos enviados!!');
 
@@ -42,7 +46,8 @@ export class ComplaintsEditFormComponent implements OnInit {
     
   }
 
-  ngOnInit() {
+  
+  ngOnInit(): void {
     
     console.log('complaints-edit-form iniciada');
 

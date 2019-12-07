@@ -16,13 +16,11 @@ export class ComplaintsDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
   
-  ngOnInit() {
+  ngOnInit(): void {
     this.route.paramMap
     .subscribe((params: ParamMap) => {
       this.numSelected = Number(params.get('id'));
-
       this.complaintList = JSON.parse(window.sessionStorage.complaintList);
-      console.log(this.complaintList);
     });
 
     console.log('complaints-detail iniciada');

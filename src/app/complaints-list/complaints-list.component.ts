@@ -17,17 +17,17 @@ export class ComplaintsListComponent implements OnInit {
 
   delete = this.complaintsService.deleteComplaint;
 
-  renderSomething () {
+  renderSomething (): void {
     console.log('cosas y cositas')
   };
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.complaintList = JSON.parse(window.sessionStorage.complaintList);
     
     console.log('complaints-list iniciada')
   };
 
-  ngDoCheck() {
+  ngDoCheck(): void {
     this.complaintList = JSON.parse(window.sessionStorage.complaintList);
   }
 

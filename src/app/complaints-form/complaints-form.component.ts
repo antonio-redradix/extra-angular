@@ -26,7 +26,7 @@ export class ComplaintsFormComponent implements OnInit {
 
   constructor(private complaintsService: ComplaintsService, private route: ActivatedRoute) { }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.complaintForm.valid) {
       console.log('Datos enviados!!');
 
@@ -38,7 +38,7 @@ export class ComplaintsFormComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     console.log('complaints-form iniciada');
   }
 

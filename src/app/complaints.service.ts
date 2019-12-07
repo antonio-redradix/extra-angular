@@ -44,41 +44,31 @@ export class ComplaintsService {
 
   constructor() {}
 
-  getComplaintList () {
+  getComplaintList (): ComplaintInterface[] {
     return this.complaintList;
   };
 
-
-  editComplaint () {
-    let arrOfComplaints = JSON.parse(window.sessionStorage.complaintList);
-    console.log(arrOfComplaints + 'editado!!');
-  };
-
-  deleteComplaint (e) {
+  deleteComplaint (e: number): void {
     let arrOfComplaints = JSON.parse(window.sessionStorage.complaintList);
     arrOfComplaints.splice(e,1)
     window.sessionStorage.complaintList = JSON.stringify(arrOfComplaints);
-    
-    console.log(arrOfComplaints);
-    console.log(e);
   };
 
-  addComplaint (complaint) {
+  addComplaint (complaint: ComplaintInterface) {
     let arrOfComplaints = JSON.parse(window.sessionStorage.complaintList);
     arrOfComplaints.push(complaint);
     window.sessionStorage.complaintList = JSON.stringify(arrOfComplaints);
   };
 
-  updateComplaintList (num, complaint) {
+  updateComplaintList (num: number, complaint: ComplaintInterface): void {
     
     let arrOfComplaints = JSON.parse(window.sessionStorage.complaintList);
     arrOfComplaints[num] = complaint;
     window.sessionStorage.complaintList = JSON.stringify(arrOfComplaints);
-    console.log(window.sessionStorage.complaintList);
     
   }
 
-  renderSomething(string) {
+  renderSomething(string: string): void {
     console.log('something rendered'+string);
   }
 
