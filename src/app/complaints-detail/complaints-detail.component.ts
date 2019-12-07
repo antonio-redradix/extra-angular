@@ -15,7 +15,7 @@ export class ComplaintsDetailComponent implements OnInit {
   complaintSelected: ComplaintInterface;
 
   constructor(private route: ActivatedRoute) { }
-
+  
   ngOnInit() {
     this.route.paramMap
     .subscribe((params: ParamMap) => {

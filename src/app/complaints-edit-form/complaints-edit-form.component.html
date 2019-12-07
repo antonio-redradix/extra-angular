@@ -1,49 +1,50 @@
 <main class="container">
     <img class="imgForm" src="../../assets/img/wiggum.gif" alt="wiggum" srcset="">
 
-    <h2 class="subtitle">Añadir un nuevo delito</h2>
+    <h2 class="subtitle">Editando delito</h2>
+    <h3 class="subtitle2">{{complaintList[numSelected].title}}</h3>
     <h3 class="message">{{success}}</h3>
 
     <form class="complaintForm" [formGroup]="complaintForm" (ngSubmit)="onSubmit()" action="#" autocomplete="off">
         <div class="complaintForm__box">
             <label class="complaintForm__label" for="title">Nombre del delito: </label>
-            <input class="complaintForm__input" formControlName="title" type="text" name="title" autofocus>
+            <input class="complaintForm__input" formControlName="title" type="text" name="title" autofocus  value="{{complaintList[numSelected].title}}">
         </div>
     
         <div class="complaintForm__box">
             <label class="complaintForm__label" for="date">Fecha: </label>
-            <input class="complaintForm__input" formControlName="date" type="date" name="date" id="">
+            <input class="complaintForm__input" formControlName="date" type="text" name="date" value="{{complaintList[numSelected].date}}">
         </div>
     
         <div class="complaintForm__box">
             <label class="complaintForm__label" for="whistleblower">Denunciante: </label>
-            <input minlength="9" class="complaintForm__input" formControlName="whistleblower" type="text" name="whistleblower" placeholder="Introduzca DNI">
+            <input class="complaintForm__input" formControlName="whistleblower" type="text" name="whistleblower" value="{{complaintList[numSelected].whistleblower}}">
         </div>
     
         <div class="complaintForm__box">
             <label class="complaintForm__label" for="priority">Prioridad: </label>
             <div class="complaintForm__input">
-                <input type="radio" value="2" formControlName="priority" name="priority" id="">Alta
-                <input type="radio" value="1" formControlName="priority" name="priority" id="">Media
-                <input type="radio" value="0" formControlName="priority" name="priority" id="">Baja
+                <input type="radio" value="2" formControlName="priority" name="priority" >Alta
+                <input type="radio" value="1" formControlName="priority" name="priority" >Media
+                <input type="radio" value="0" formControlName="priority" name="priority" >Baja
             </div>
         </div>
     
         <div class="complaintForm__box">
             <label class="complaintForm__label" for="cyberSecurity">Ciberseguridad: </label>
             <div class="complaintForm__input">
-                <input type="radio" formControlName="cyberSecurity" value="1" name="cyberSecurity" id="">Sí
-                <input type="radio" formControlName="cyberSecurity" value="0" name="cyberSecurity" id="">No
+                <input type="radio" formControlName="cyberSecurity" value="1" name="cyberSecurity" >Sí
+                <input type="radio" formControlName="cyberSecurity" value="0" name="cyberSecurity" >No
             </div>
         </div>
     
         <div class="complaintForm__box">
             <label class="complaintForm__label" for="declaration">Declaración: </label>
-            <textarea id="declaration" minlength="20" rows="4" type="text" formControlName="declaration" class="complaintForm__input" placeholder="Introduzca una descripción de al menos 20 caracteres sobre el delito"></textarea>
+            <textarea id="declaration" rows="4" type="text" formControlName="declaration" class="complaintForm__input" value="{{complaintList[numSelected].declaration}}"></textarea>
         </div>
     
         <div class="inputSubmit">
-            <input  type="submit"  name="submit" [disabled]="!complaintForm.valid" value="Añadir delito">
+            <input  type="submit"  name="submit" [disabled]="!complaintForm.valid" value="Confirmar edición de delito">
         </div>
         <div class="btnBox">
             <div class="btn" routerLink="/">Volver a lista de delitos</div>

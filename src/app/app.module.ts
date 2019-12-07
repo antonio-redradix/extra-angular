@@ -9,11 +9,12 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { ComplaintsDetailComponent } from './complaints-detail/complaints-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ComplaintAppComponent } from './complaint-app/complaint-app.component';
+import { ComplaintsEditFormComponent } from './complaints-edit-form/complaints-edit-form.component';
 
 const appRoutes: Routes = [
   { path: 'list', component: ComplaintsListComponent },
   { path: 'add', component: ComplaintsFormComponent },
-  { path: 'add/:id', component: ComplaintsFormComponent },
+  { path: 'edit/:id', component: ComplaintsEditFormComponent },
   { path: 'detail/:id', component: ComplaintsDetailComponent },
   { path: '', redirectTo: '/list' , pathMatch: 'full' },
   { path: '**', component: NotFoundPageComponent },
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     ComplaintsFormComponent,
     NotFoundPageComponent,
     ComplaintsDetailComponent,
-    ComplaintAppComponent
+    ComplaintAppComponent,
+    ComplaintsEditFormComponent
   ],
   imports: [
     BrowserModule,

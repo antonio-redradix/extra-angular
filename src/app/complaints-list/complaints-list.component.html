@@ -8,7 +8,7 @@
             <div class="complaint__date">Denunciante: {{elem.date}}</div>
             <div class="complaint__btnBox">
                 <div class="btn" routerLink="/detail/{{i}}">Ver</div>
-                <div class="btn">Editar</div>
+                <div class="btn" routerLink="/edit/{{i}}">Editar</div>
                 <div (click)="delete(i)" class="btn">Archivar</div>
             </div>
         </div>

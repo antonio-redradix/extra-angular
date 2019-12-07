@@ -26,10 +26,10 @@ main {
 }
 
 .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     text-shadow: 2px 2px white;
-    padding: 20px;
+    padding: 10px;
 }
 
 .subtitle {
@@ -46,6 +46,7 @@ main {
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 0 5px 5px $terciary-color;
+    overflow: auto;
 }
 
 .btn {
@@ -68,5 +69,9 @@ main {
 .regBtn {
     width: 30%;
     margin: 10px;
+}
+
+.inputSubmit {
+    padding: 5px;
 }
 

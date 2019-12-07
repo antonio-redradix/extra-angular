@@ -48,6 +48,7 @@ export class ComplaintsService {
     return this.complaintList;
   };
 
+
   editComplaint () {
     let arrOfComplaints = JSON.parse(window.sessionStorage.complaintList);
     console.log(arrOfComplaints + 'editado!!');
@@ -68,7 +69,12 @@ export class ComplaintsService {
     window.sessionStorage.complaintList = JSON.stringify(arrOfComplaints);
   };
 
-  updateComplaintList () {
+  updateComplaintList (num, complaint) {
+    
+    let arrOfComplaints = JSON.parse(window.sessionStorage.complaintList);
+    arrOfComplaints[num] = complaint;
+    window.sessionStorage.complaintList = JSON.stringify(arrOfComplaints);
+    console.log(window.sessionStorage.complaintList);
     
   }
 

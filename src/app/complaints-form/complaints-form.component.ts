@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ComplaintsService } from '../../app/complaints.service';
 import { FormControl, FormGroup, Validators, MaxLengthValidator } from '@angular/forms';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+
 
 @Component({
   selector: 'app-complaints-form',
@@ -9,8 +11,9 @@ import { FormControl, FormGroup, Validators, MaxLengthValidator } from '@angular
 })
 export class ComplaintsFormComponent implements OnInit {
 
-  maxLength: number =9;
+  maxLength: number = 9;
   success: string;
+  numSelected: number;
 
   complaintForm = new FormGroup({
     title: new FormControl('', Validators.required),
@@ -21,7 +24,7 @@ export class ComplaintsFormComponent implements OnInit {
     declaration: new FormControl('', Validators.required),
   });
 
-  constructor(private complaintsService: ComplaintsService) { }
+  constructor(private complaintsService: ComplaintsService, private route: ActivatedRoute) { }
 
   onSubmit() {
     if (this.complaintForm.valid) {
