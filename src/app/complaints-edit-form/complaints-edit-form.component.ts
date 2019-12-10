@@ -49,7 +49,6 @@ export class ComplaintsEditFormComponent implements OnInit {
   
   ngOnInit(): void {
     
-    console.log('complaints-edit-form iniciada');
 
     this.complaintList = JSON.parse(window.sessionStorage.complaintList);
 
@@ -57,11 +56,8 @@ export class ComplaintsEditFormComponent implements OnInit {
     this.route.paramMap
     .subscribe((params: ParamMap) => {
       this.numSelected = Number(params.get('id'));
-      console.log(this.complaintList[this.numSelected]);
-      console.log(this.complaintList[this.numSelected].date)
     });
 
-    console.log(this.numSelected);
 
     this.complaintForm.setValue({
       title: this.complaintList[this.numSelected].title,
@@ -71,9 +67,5 @@ export class ComplaintsEditFormComponent implements OnInit {
       cyberSecurity: this.complaintList[this.numSelected].cyberSecurity,
       declaration: this.complaintList[this.numSelected].declaration
     });
-    
   }
-
-  
-
 }

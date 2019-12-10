@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     text-align: left;
+    flex-wrap: wrap;
     padding: 10px;
     
 
@@ -35,15 +36,17 @@
     overflow: auto;
 }
 
-.btnBox {
-    display: flex;
-    justify-content: center;
-    padding: 2%;
+// .btnBox {
+//     display: flex;
+//     justify-content: center;
+//     padding: 2%;
 
-    &__list {
-        width: 30%;
-    }
-}
+//     &__list {
+//         width: 30%;
+//     }
+// }
+
+@import '../../mediaQueries.scss';
 
 
 

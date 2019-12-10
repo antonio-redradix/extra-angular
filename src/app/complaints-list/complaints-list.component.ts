@@ -23,8 +23,6 @@ export class ComplaintsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.complaintList = JSON.parse(window.sessionStorage.complaintList);
-    
-    console.log('complaints-list iniciada')
   };
 
   ngDoCheck(): void {

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ComplaintsService } from '../complaints.service';
 import { ComplaintInterface } from '../../interfaces/interfaces';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
@@ -22,7 +21,5 @@ export class ComplaintsDetailComponent implements OnInit {
       this.numSelected = Number(params.get('id'));
       this.complaintList = JSON.parse(window.sessionStorage.complaintList);
     });
-
-    console.log('complaints-detail iniciada');
   }
 }
