@@ -53,11 +53,25 @@ export class ComplaintsEditFormComponent implements OnInit {
 
     this.complaintList = JSON.parse(window.sessionStorage.complaintList);
 
+    
     this.route.paramMap
     .subscribe((params: ParamMap) => {
       this.numSelected = Number(params.get('id'));
-    
+      console.log(this.complaintList[this.numSelected]);
+      console.log(this.complaintList[this.numSelected].date)
     });
+
+    console.log(this.numSelected);
+
+    this.complaintForm.setValue({
+      title: this.complaintList[this.numSelected].title,
+      date: this.complaintList[this.numSelected].date,
+      whistleblower: this.complaintList[this.numSelected].whistleblower,
+      priority: this.complaintList[this.numSelected].priority,
+      cyberSecurity: this.complaintList[this.numSelected].cyberSecurity,
+      declaration: this.complaintList[this.numSelected].declaration
+    });
+    
   }
 
   

@@ -8,12 +8,12 @@
     <form class="complaintForm" [formGroup]="complaintForm" (ngSubmit)="onSubmit()" action="#" autocomplete="off">
         <div class="complaintForm__box">
             <label class="complaintForm__label" for="title">Nombre del delito: </label>
-            <input class="complaintForm__input" formControlName="title" type="text" name="title" autofocus  value="{{complaintList[numSelected].title}}">
+            <input class="complaintForm__input" formControlName="title" type="text" name="title" autofocus >
         </div>
     
         <div class="complaintForm__box">
             <label class="complaintForm__label" for="date">Fecha: </label>
-            <input class="complaintForm__input" formControlName="date" type="text" name="date" value="{{complaintList[numSelected].date}}">
+            <input class="complaintForm__input" formControlName="date" type="text" name="date" >
         </div>
     
         <div class="complaintForm__box">
@@ -44,7 +44,7 @@
         </div>
     
         <div class="inputSubmit">
-            <input  type="submit"  name="submit" [disabled]="!complaintForm.valid" value="Confirmar edición de delito">
+            <input  type="submit"  name="submit" value="Confirmar edición de delito">
         </div>
         <div class="btnBox">
             <div class="btn" routerLink="/">Volver a lista de delitos</div>
